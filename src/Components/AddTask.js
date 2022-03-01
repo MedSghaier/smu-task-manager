@@ -13,6 +13,7 @@ const AddTask = () => {
   const handleAddTask = () => {
     if (taskName.length) {
       setTasks([...tasks, taskName]);
+      setTaskName("");
     }
   };
 
