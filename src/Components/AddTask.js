@@ -4,7 +4,7 @@ const AddTask = () => {
   let [taskName, setTaskName] = useState("");
 
   //   Array of tasks
-  const [tasks, setTasks] = useState(["Eat", "Sleep", "Drink", "Go out"]);
+  const [tasks, setTasks] = useState(["Eat", "Sleep", "Drink", "Code"]);
 
   const onChange = (event) => {
     setTaskName(event.target.value);
@@ -13,6 +13,7 @@ const AddTask = () => {
   const handleAddTask = () => {
     if (taskName.length) {
       setTasks([...tasks, taskName]);
+      setTaskName("");
     }
   };
 
@@ -22,7 +23,7 @@ const AddTask = () => {
   return (
     <div className="App">
       <>
-        <input type="text" onChange={onChange} />
+        <input type="text" onChange={onChange} value={tasks[0]} />
         <button onClick={handleAddTask}>Add task!!!!</button>
         <ul>
           {tasks.map((task) => (
