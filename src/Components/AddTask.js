@@ -4,7 +4,7 @@ const AddTask = () => {
   let [taskName, setTaskName] = useState("");
 
   //   Array of tasks
-  const [tasks, setTasks] = useState(["Eat", "Sleep", "Drink"]);
+  const [tasks, setTasks] = useState(["Eat", "Sleep", "Drink", "Go out"]);
 
   const onChange = (event) => {
     setTaskName(event.target.value);
